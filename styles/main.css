@@ -2,7 +2,7 @@
   --primary: #f7b92a;
   --primary-glow: 0 0 32px #f7b92a55, 0 0 4px #f7b92a99;
   --background: #fffdfa;
-  --text: #222;
+  --text: #202020;
   --accent: #2a7cf7;
   --accent-faint: #fdf6e8;
   --card-bg: #fff;
@@ -27,6 +27,24 @@ body {
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
   scroll-behavior: smooth;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 10px;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.7rem 1.3rem;
+  z-index: 1000;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: left 0.2s, box-shadow 0.2s;
+}
+.skip-link:focus {
+  left: 20px;
+  box-shadow: 0 2px 16px #f7b92a66;
 }
 
 .container {
@@ -109,9 +127,13 @@ body {
   padding: 0.32rem 0.9rem;
   transition: background var(--transition), color var(--transition);
   position: relative;
-  overflow: hidden;
+  outline: none;
 }
-
+.nav-links a:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  background: #2222;
+}
 .nav-links a:before {
   content: "";
   position: absolute;
@@ -202,9 +224,12 @@ body {
   cursor: pointer;
   border: 2px solid #fff;
   position: relative;
-  overflow: hidden;
+  outline: none;
 }
-
+.cta-btn:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 .cta-btn:hover {
   background: var(--primary);
   color: #fff;
@@ -338,6 +363,46 @@ body {
   filter: drop-shadow(0 2px 10px #f7b92a33);
 }
 
+.order-tracking-section {
+  padding: 3.2rem 0 2.4rem 0;
+  background: var(--glass-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+  backdrop-filter: blur(8px);
+}
+
+.order-tracking-section h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.1rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.order-tracking-section p {
+  text-align: center;
+  font-size: 1.08rem;
+  margin-bottom: 1.5rem;
+}
+
+.google-sheet-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: var(--shadow-lg);
+  background: #fff;
+}
+.google-sheet-responsive iframe {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border: none;
+  min-height: 350px;
+}
+
 .portfolio {
   padding: 3.3rem 0 2.2rem 0;
   background: #fff;
@@ -427,7 +492,7 @@ body {
 .footer {
   background: var(--card-bg);
   color: #888;
-  padding: 1.2rem 0;
+  padding: 1.2rem 0 0.2rem 0;
   text-align: center;
   font-size: 0.97rem;
   border-top: 1px solid #e8e8ee;
@@ -435,7 +500,51 @@ body {
   border-radius: 0 0 32px 32px;
 }
 
-/* Glassy/Neumorphism Effect */
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+  margin-bottom: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin: 0 0.3rem;
+  transition: color 0.2s, transform 0.2s;
+  display: inline-block;
+  outline: none;
+}
+.footer-social a:focus,
+.footer-social a:hover {
+  color: var(--accent);
+  transform: translateY(-2px) scale(1.13);
+}
+
+.footer-quick-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-quick-links a {
+  color: #444;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+  outline: none;
+  border-radius: 6px;
+  padding: 0.2rem 0.4rem;
+}
+.footer-quick-links a:focus,
+.footer-quick-links a:hover {
+  color: var(--primary);
+  background: #f7b92a11;
+}
+
 .glassy {
   background: var(--glass-bg);
   backdrop-filter: blur(14px);
@@ -493,4 +602,7 @@ body {
   .brand-name { font-size: 1.1rem; }
   .hero-logo { height: 44px; }
   .footer { font-size: 0.89rem; }
+  .footer-links { flex-direction: column; gap: 0.7rem;}
+  .footer-quick-links { flex-direction: column; gap: 0.4rem;}
+  .google-sheet-responsive { padding-bottom: 70%; }
 }
