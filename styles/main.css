@@ -363,6 +363,26 @@ body {
   filter: drop-shadow(0 2px 10px #f7b92a33);
 }
 
+/* --- Demo QR Code --- */
+.demo-qr {
+  display: block;
+  max-width: 220px;
+  width: 100%;
+  margin: 1.2rem auto 0.5rem auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0002;
+  background: #fff;
+}
+.qr-caption {
+  text-align: center;
+  color: var(--primary);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  margin-top: 0.15rem;
+  letter-spacing: 0.2px;
+}
+
 .order-tracking-section {
   padding: 3.2rem 0 2.4rem 0;
   background: var(--glass-bg);
@@ -576,39 +596,6 @@ body {
   to { opacity: 1; transform: translateY(0);}
 }
 
-/* Responsive Styles */
-@media (max-width: 1050px) {
-  .container { max-width: 98vw; }
-}
-@media (max-width: 900px) {
-  .container { max-width: 100vw; }
-}
-@media (max-width: 800px) {
-  .features-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .header-flex {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .hero-title { font-size: 2rem; }
-}
-@media (max-width: 600px) {
-  .hero-title { font-size: 1.3rem; }
-  .container { padding: 0 0.6rem; }
-  .feature-card { min-width: 0; }
-  .logo-img { height: 32px; }
-  .brand-name { font-size: 1.1rem; }
-  .hero-logo { height: 44px; }
-  .footer { font-size: 0.89rem; }
-  .footer-links { flex-direction: column; gap: 0.7rem;}
-  .footer-quick-links { flex-direction: column; gap: 0.4rem;}
-  .google-sheet-responsive { padding-bottom: 70%; }
-}
-
-/* ... (existing styles remain unchanged, append the following or update as below) ... */
-
 /* --- Hamburger/Nav Toggle Styles --- */
 .nav-toggle {
   background: none;
@@ -682,26 +669,6 @@ body {
   cursor: pointer;
 }
 
-/* --- Demo QR Code --- */
-.demo-qr {
-  display: block;
-  max-width: 220px;
-  width: 100%;
-  margin: 1.2rem auto 0.5rem auto;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px #0002;
-  background: #fff;
-}
-.qr-caption {
-  text-align: center;
-  color: var(--primary);
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  margin-top: 0.15rem;
-  letter-spacing: 0.2px;
-}
-
 /* --- Hide nav links on mobile when closed --- */
 @media (max-width: 800px) {
   .nav-links {
@@ -734,4 +701,35 @@ body {
   .nav-toggle {
     display: none !important;
   }
+}
+
+/* Responsive Styles */
+@media (max-width: 1050px) {
+  .container { max-width: 98vw; }
+}
+@media (max-width: 900px) {
+  .container { max-width: 100vw; }
+}
+@media (max-width: 800px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero-title { font-size: 2rem; }
+}
+@media (max-width: 600px) {
+  .hero-title { font-size: 1.3rem; }
+  .container { padding: 0 0.6rem; }
+  .feature-card { min-width: 0; }
+  .logo-img { height: 32px; }
+  .brand-name { font-size: 1.1rem; }
+  .hero-logo { height: 44px; }
+  .footer { font-size: 0.89rem; }
+  .footer-links { flex-direction: column; gap: 0.7rem;}
+  .footer-quick-links { flex-direction: column; gap: 0.4rem;}
+  .google-sheet-responsive { padding-bottom: 70%; }
 }
