@@ -19,7 +19,10 @@
         <span class="brand-name">OrderSaap</span>
       </div>
       <nav aria-label="Main navigation">
-        <ul class="nav-links">
+        <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navbar-menu">
+          <i class="ph ph-list"></i>
+        </button>
+        <ul class="nav-links" id="navbar-menu">
           <li><a href="#features">Features</a></li>
           <li><a href="#demo">Live Demo</a></li>
           <li><a href="#order-tracking-log">Order Tracking Log</a></li>
@@ -37,7 +40,7 @@
         <div class="hero-logo-glow">
           <img src="assets/LOGO.JPG" alt="OrderSaap Logo" class="logo-img hero-logo" />
         </div>
-        <h2 class="hero-title animate-fade-in">Resturant Ordering, Reimagined Through WhatsApp</h2>
+        <h2 class="hero-title animate-fade-in">Smart, Simple, and Fast Order Management</h2>
         <p class="hero-subtitle animate-fade-in">Empower your business with OrderSaap – the next-generation ordering system.</p>
         <a href="#demo" class="cta-btn animate-fade-in">Try Live Demo</a>
       </div>
@@ -77,7 +80,9 @@
         <h3>Live Demo</h3>
         <div class="demo-box animate-up">
           <i class="ph ph-monitor demo-icon"></i>
-          <p>[Demo will be embedded here]</p>
+          <p>Scan the QR code below to access the OrderSaap Live Demo on your mobile device:</p>
+          <img src="assets/LIVE DEMO.png" alt="OrderSaap Live Demo QR Code" class="demo-qr" />
+          <div class="qr-caption">OrderSaap Live Demo</div>
         </div>
       </div>
       <div class="wave-divider">
@@ -124,7 +129,7 @@
     <section id="contact" class="contact glassy">
       <div class="container">
         <h3>Contact</h3>
-        <p>Interested in OrderSaap? Reach out: <a href="mailto:orders@ordersaap.com"><i class="ph ph-envelope"></i> orders@ordersaap.com</a></p>
+        <p>Interested in OrderSaap? Reach out: <a href="mailto:your.email@example.com"><i class="ph ph-envelope"></i> your.email@example.com</a></p>
       </div>
     </section>
   </main>
@@ -150,5 +155,6 @@
       <p>© 2025 OrderSaap. All rights reserved.</p>
     </div>
   </footer>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
