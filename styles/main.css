@@ -409,7 +409,7 @@ body {
 
 .google-sheet-responsive {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 ratio */
+  padding-bottom: 56.25%; 
   height: 0;
   overflow: hidden;
   border-radius: 14px;
@@ -596,7 +596,6 @@ body {
   to { opacity: 1; transform: translateY(0);}
 }
 
-/* --- Hamburger/Nav Toggle Styles --- */
 .nav-toggle {
   background: none;
   border: none;
@@ -656,7 +655,6 @@ body {
   }
 }
 
-/* --- Overlay for nav menu when open --- */
 .nav-overlay {
   display: none;
 }
@@ -669,7 +667,6 @@ body {
   cursor: pointer;
 }
 
-/* --- Hide nav links on mobile when closed --- */
 @media (max-width: 800px) {
   .nav-links {
     display: flex;
@@ -703,7 +700,6 @@ body {
   }
 }
 
-/* Responsive Styles */
 @media (max-width: 1050px) {
   .container { max-width: 98vw; }
 }
