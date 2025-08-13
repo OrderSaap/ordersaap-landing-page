@@ -105,7 +105,7 @@ body {
 }
 
 .brand-name {
-  font-size: 3.5rem;
+  font-size: 2.0rem;
   font-weight: 700;
   color: var(--primary);
   letter-spacing: 1.5px;
@@ -192,7 +192,7 @@ body {
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1.1rem;
   letter-spacing: 1px;
@@ -200,7 +200,7 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.0rem;
+  font-size: 1.8rem;
   opacity: 0.96;
   margin-bottom: 2.4rem;
   text-shadow: 0 1px 12px #f7b92a33;
@@ -696,7 +696,7 @@ body {
     flex-direction: column;
     gap: 1rem;
   }
-  .hero-title { font-size: 1.6rem; }
+  .hero-title { font-size: 2.5rem; }
 }
 @media (max-width: 600px) {
   .hero-title { font-size: 2.3rem; }
